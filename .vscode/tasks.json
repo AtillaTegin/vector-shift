@@ -1,0 +1,9 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "Oyunu başlat (brauzer)", "type": "shell", "command": "npm.cmd run dev -- --open", "isBackground": true, "problemMatcher": [], "group": { "kind": "build", "isDefault": true } },
+    { "label": "Levelləri yoxla (verify)", "type": "shell", "command": "npm.cmd run verify", "problemMatcher": [] },
+    { "label": "Build", "type": "shell", "command": "npm.cmd run build", "problemMatcher": ["$tsc"] },
+    { "label": "Exe paketlə", "type": "shell", "command": "npm.cmd run dist", "problemMatcher": [] }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "vector-shift",
+  "productName": "VECTOR Shift",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "verify": "tsx tools/verify.ts",
+    "electron": "electron .",
+    "electron:dev": "npm run build && electron .",
+    "dist": "npm run build && electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.vectorshift.game",
+    "productName": "VECTOR Shift",
+    "files": [
+      "dist/**",
+      "electron/**"
+    ],
+    "directories": {
+      "output": "release"
+    }
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.21.0",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.187.0",
+    "electron": "^45.3.2",
+    "electron-builder": "^26.18.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}
